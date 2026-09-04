@@ -1,0 +1,278 @@
+/* 
+   CREATE ACCOUNT PAGE
+  */
+
+.create-account-page {
+  min-height: calc(100vh - 120px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 50px 20px;
+
+  color: var(--text-h);
+}
+
+
+/* 
+   CARD
+  */
+
+.create-account-card {
+  width: 100%;
+  max-width: 450px;
+
+  padding: 35px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 20px;
+
+  background: var(--card);
+
+  color: var(--text-h);
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+/* 
+   HEADER
+  */
+
+.create-account-header {
+  margin-bottom: 28px;
+}
+
+.create-account-header .eyebrow {
+  margin: 0 0 8px;
+
+  color: var(--accent);
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.create-account-header h2 {
+  margin: 0 0 10px;
+
+  font-size: 30px;
+
+  color: var(--text-h);
+}
+
+.create-account-header p:last-child {
+  margin: 0;
+
+  color: var(--text);
+
+  line-height: 1.6;
+}
+
+
+/* 
+   ERROR
+  */
+
+.account-error {
+  margin-bottom: 18px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #fecaca;
+
+  border-radius: 10px;
+
+  background: #fef2f2;
+
+  color: #b91c1c;
+
+  font-size: 14px;
+}
+
+
+/* 
+   FORM
+  */
+
+.create-account-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.create-account-form label {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+
+  color: var(--text-h);
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+/* 
+   INPUTS
+  */
+
+.create-account-form input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 12px 13px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+
+  background: var(--bg);
+
+  color: var(--text-h);
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.create-account-form input::placeholder {
+  color: var(--text);
+}
+
+.create-account-form input:focus {
+  border-color: var(--accent);
+}
+
+
+/* 
+   BUTTON
+  */
+
+.create-account-form button {
+  margin-top: 4px;
+
+  padding: 12px 18px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: var(--text-h);
+
+  color: var(--bg);
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.create-account-form button:hover {
+  opacity: 0.9;
+
+  transform: translateY(-1px);
+}
+
+.create-account-form button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* 
+   FOOTER
+  */
+
+.create-account-footer {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  margin-top: 24px;
+
+  color: var(--text);
+
+  font-size: 14px;
+}
+
+.create-account-footer a {
+  color: var(--accent);
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.create-account-footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* 
+   DARK MODE
+  */
+
+:root[data-theme='dark'] .create-account-card {
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+:root[data-theme='dark'] .create-account-form input {
+  background: var(--bg);
+  border-color: var(--border);
+}
+
+:root[data-theme='dark'] .create-account-form button {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+
+/* 
+   MOBILE
+  */
+
+@media (max-width: 500px) {
+
+  .create-account-page {
+    padding: 30px 16px;
+  }
+
+  .create-account-card {
+    padding: 25px 20px;
+  }
+
+  .create-account-header h2 {
+    font-size: 26px;
+  }
+}

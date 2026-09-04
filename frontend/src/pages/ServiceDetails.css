@@ -1,0 +1,217 @@
+/* 
+   SERVICE DETAILS PAGE
+  */
+
+.service-details-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 20px;
+
+  color: var(--text-h);
+}
+
+
+/* 
+   HEADER
+  */
+
+.service-details-header {
+  margin-bottom: 28px;
+}
+
+.service-details-header h2 {
+  margin: 0 0 8px;
+
+  font-size: 28px;
+
+  color: var(--text-h);
+}
+
+.service-details-header p {
+  margin: 0;
+
+  color: var(--text);
+
+  line-height: 1.5;
+}
+
+
+/* 
+   BASIS OPTIONS
+  */
+
+.basis-options {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 16px;
+
+  margin-bottom: 24px;
+}
+
+.basis-option {
+  padding: 20px;
+
+  text-align: left;
+
+  border: 2px solid var(--border);
+
+  border-radius: 16px;
+
+  background: var(--card);
+
+  color: var(--text-h);
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.basis-option strong {
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-size: 18px;
+
+  color: var(--text-h);
+}
+
+.basis-option span {
+  display: block;
+
+  color: var(--text);
+
+  line-height: 1.4;
+}
+
+.basis-option:hover {
+  border-color: var(--accent-border);
+
+  background: var(--accent-bg);
+
+  transform: translateY(-1px);
+}
+
+.basis-option.selected {
+  border-color: var(--accent);
+
+  background: var(--accent-bg);
+
+  color: var(--text-h);
+
+  font-weight: 600;
+}
+
+
+/* 
+   SELECTED BASIS
+  */
+
+.selected-basis {
+  padding: 18px;
+
+  margin-bottom: 20px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 12px;
+
+  background: var(--code-bg);
+
+  color: var(--text-h);
+}
+
+.selected-basis p {
+  margin: 0 0 4px;
+
+  color: var(--text);
+
+  font-size: 14px;
+}
+
+.selected-basis strong {
+  font-size: 18px;
+
+  color: var(--text-h);
+}
+
+
+/* 
+   VIEW REQUIREMENTS BUTTON
+  */
+
+.view-requirements-button {
+  padding: 12px 20px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: var(--text-h);
+
+  color: var(--bg);
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.view-requirements-button:hover {
+  opacity: 0.85;
+
+  transform: translateY(-1px);
+}
+
+
+/* 
+   DARK MODE
+  */
+
+:root[data-theme='dark'] .basis-option {
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+:root[data-theme='dark'] .basis-option:hover {
+  background: var(--accent-bg);
+}
+
+:root[data-theme='dark'] .selected-basis {
+  background: var(--code-bg);
+}
+
+
+/* 
+   MOBILE
+  */
+
+@media (max-width: 600px) {
+
+  .service-details-page {
+    padding: 28px 16px;
+  }
+
+  .service-details-header h2 {
+    font-size: 25px;
+  }
+
+  .basis-options {
+    grid-template-columns: 1fr;
+  }
+
+  .basis-option {
+    padding: 18px;
+  }
+}

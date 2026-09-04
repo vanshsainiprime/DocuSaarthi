@@ -1,0 +1,282 @@
+/* 
+   SHARED DOCUMENTS PAGE
+  */
+
+.shared-documents-page {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+  color: var(--text-h);
+}
+
+
+/* 
+   INTRO
+  */
+
+.shared-intro {
+  margin-bottom: 35px;
+}
+
+.shared-intro .eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+}
+
+.shared-intro h2 {
+  margin: 8px 0;
+
+  font-size: 34px;
+
+  color: var(--text-h);
+}
+
+.shared-intro > p {
+  color: var(--text);
+
+  line-height: 1.6;
+}
+
+
+/* 
+   EXPIRY
+  */
+
+.share-expiry {
+  display: inline-block;
+
+  margin-top: 18px;
+
+  padding: 10px 14px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+
+  background: var(--code-bg);
+
+  color: var(--text);
+
+  font-size: 13px;
+}
+
+
+/* 
+   SHARED FILES
+  */
+
+.shared-files {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+/* 
+   FILE CARD
+  */
+
+.shared-file-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 18px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 14px;
+
+  background: var(--card);
+
+  color: var(--text-h);
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.04);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.shared-file-card:hover {
+  border-color: var(--accent-border);
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.07);
+}
+
+
+/* 
+   FILE ICON
+  */
+
+.shared-file-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  background: var(--accent-bg);
+
+  color: var(--accent);
+
+  font-size: 20px;
+}
+
+
+/* 
+   FILE INFO
+  */
+
+.shared-file-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.shared-file-info h3 {
+  margin: 0 0 5px;
+
+  color: var(--text-h);
+
+  font-size: 15px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.shared-file-info p {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 12px;
+}
+
+
+/* 
+   DOWNLOAD BUTTON
+  */
+
+.download-button {
+  padding: 9px 13px;
+
+  border-radius: 8px;
+
+  background: var(--text-h);
+
+  color: var(--bg);
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.download-button:hover {
+  opacity: 0.85;
+
+  transform: translateY(-1px);
+}
+
+
+/* 
+   EMPTY / STATE
+  */
+
+.shared-state {
+  padding: 80px 20px;
+
+  text-align: center;
+
+  color: var(--text-h);
+}
+
+.shared-state-icon {
+  margin-bottom: 15px;
+
+  font-size: 35px;
+}
+
+.shared-state h2 {
+  margin: 0 0 8px;
+
+  color: var(--text-h);
+}
+
+.shared-state p {
+  margin: 0;
+
+  color: var(--text);
+}
+
+
+/* 
+   DARK MODE
+  */
+
+:root[data-theme='dark'] .shared-file-card {
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+:root[data-theme='dark'] .shared-file-card:hover {
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+
+/* 
+   MOBILE
+  */
+
+@media (max-width: 600px) {
+
+  .shared-documents-page {
+    padding: 40px 16px 70px;
+  }
+
+  .shared-intro h2 {
+    font-size: 28px;
+  }
+
+  .shared-file-card {
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+  }
+
+  .shared-file-info {
+    width: calc(100% - 65px);
+  }
+
+  .download-button {
+    width: 100%;
+
+    text-align: center;
+  }
+}

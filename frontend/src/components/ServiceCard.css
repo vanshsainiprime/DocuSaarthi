@@ -1,0 +1,139 @@
+/* 
+   SERVICE CARD
+  */
+
+.service-card {
+  margin-top: 16px;
+  padding: 24px;
+
+  border: 1px solid var(--border);
+  border-radius: 16px;
+
+  background: var(--card);
+  color: var(--text-h);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.service-card:hover {
+  border-color: var(--accent-border);
+
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+
+/* 
+   TITLE
+  */
+
+.service-card h3 {
+  margin: 0 0 8px;
+
+  font-size: 20px;
+
+  color: var(--text-h);
+}
+
+
+/* 
+   DESCRIPTION
+  */
+
+.service-card p {
+  margin: 0 0 12px;
+
+  line-height: 1.5;
+
+  color: var(--text);
+}
+
+
+/* 
+   REQUIREMENT COUNT
+  */
+
+.requirement-count {
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: var(--text-h) !important;
+}
+
+
+/* 
+   START BUTTON
+  */
+
+.start-button {
+  margin-top: 4px;
+
+  padding: 10px 18px;
+
+  border: 1px solid var(--accent);
+
+  border-radius: 8px;
+
+  background: var(--accent);
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.start-button:hover {
+  opacity: 0.9;
+
+  transform: translateY(-1px);
+
+  background: var(--accent);
+}
+
+
+/* 
+   DARK MODE
+  */
+
+:root[data-theme='dark'] .service-card {
+  background: var(--card);
+
+  border-color: var(--border);
+
+  color: var(--text-h);
+}
+
+:root[data-theme='dark'] .service-card:hover {
+  border-color: var(--accent-border);
+
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+:root[data-theme='dark'] .start-button {
+  background: var(--accent);
+
+  border-color: var(--accent);
+
+  color: #ffffff;
+}
+
+:root[data-theme='dark'] .start-button:hover {
+  background: var(--accent);
+
+  border-color: var(--accent);
+
+  opacity: 0.9;
+}

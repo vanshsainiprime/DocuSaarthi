@@ -1,0 +1,394 @@
+/* 
+   DOCUMENT CARD
+  */
+
+.document-card {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-width: 0;
+
+  overflow: hidden;
+
+  border: 1px solid var(--border);
+  border-radius: 16px;
+
+  background: var(--card);
+
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.04);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.document-card:hover {
+  transform: translateY(-3px);
+
+  border-color: var(--accent-border);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.09);
+}
+
+
+/* 
+   DOCUMENT PREVIEW
+  */
+
+.document-preview {
+  position: relative;
+
+  width: 100%;
+  height: 210px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      var(--accent-bg),
+      var(--card)
+    );
+
+  border-bottom: 1px solid var(--border);
+}
+
+
+/* 
+   IMAGE PREVIEW
+  */
+
+.document-preview-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.document-card:hover
+.document-preview-image {
+  transform: scale(1.03);
+}
+
+
+/* 
+   PDF PREVIEW
+  */
+
+.document-preview-pdf {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pdf-page {
+  width: 125px;
+  height: 165px;
+
+  padding: 18px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-radius: 4px;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.18);
+
+  transform: rotate(-2deg);
+}
+
+.pdf-label {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #dc2626;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  text-align: center;
+}
+
+.pdf-lines {
+  display: flex;
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.pdf-lines span {
+  display: block;
+
+  height: 5px;
+
+  border-radius: 4px;
+
+  background: #d1d5db;
+}
+
+.pdf-lines span:nth-child(2) {
+  width: 80%;
+}
+
+.pdf-lines span:nth-child(3) {
+  width: 90%;
+}
+
+.pdf-lines span:nth-child(4) {
+  width: 65%;
+}
+
+.pdf-lines span:nth-child(5) {
+  width: 75%;
+}
+
+
+/* 
+   FILE TYPE
+  */
+
+.document-file-type {
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  padding: 5px 9px;
+
+  border-radius: 7px;
+
+  background: rgba(15, 23, 42, 0.82);
+
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* 
+   CARD BODY
+  */
+
+.document-card-body {
+  padding: 16px 16px 12px;
+}
+
+.document-card-body h3 {
+  margin: 0 0 10px;
+
+  color: var(--text-h);
+
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.35;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* 
+   CATEGORY
+  */
+
+.document-category {
+  width: 100%;
+
+  margin-bottom: 9px;
+
+  padding: 7px 10px;
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  background: var(--accent-bg);
+
+  color: var(--accent);
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  outline: none;
+}
+
+.document-category:focus {
+  border-color: var(--accent-border);
+}
+
+
+/* 
+   UPLOAD DATE
+  */
+
+.document-upload-date {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 12px;
+}
+
+
+/* 
+   ACTIONS
+  */
+
+.document-actions {
+  display: flex;
+
+  gap: 7px;
+
+  padding: 0 16px 16px;
+}
+
+.document-actions button {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 8px 6px;
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: var(--text-h);
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+
+/* 
+   VIEW
+  */
+
+.document-view-button:hover {
+  background: var(--accent-bg);
+
+  border-color: var(--accent-border);
+
+  color: var(--accent);
+}
+
+
+/* 
+   RENAME
+  */
+
+.document-rename-button:hover {
+  background: var(--accent-bg);
+
+  border-color: var(--accent-border);
+
+  color: var(--accent);
+}
+
+
+/* 
+   DELETE
+  */
+
+.document-delete-button {
+  color: #ef4444 !important;
+}
+
+.document-delete-button:hover {
+  background: rgba(239, 68, 68, 0.1);
+
+  border-color: rgba(239, 68, 68, 0.35);
+
+  color: #ef4444 !important;
+}
+
+
+/* 
+   DARK MODE
+  */
+
+:root[data-theme='dark']
+.document-card {
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.22);
+}
+
+:root[data-theme='dark']
+.document-card:hover {
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+:root[data-theme='dark']
+.document-preview {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(96, 165, 250, 0.12),
+      #1f2937
+    );
+}
+
+:root[data-theme='dark']
+.pdf-page {
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.45);
+}
+
+
+/* 
+   MOBILE
+  */
+
+@media (max-width: 600px) {
+
+  .document-preview {
+    height: 180px;
+  }
+
+  .pdf-page {
+    width: 105px;
+    height: 140px;
+  }
+
+  .document-card-body {
+    padding: 14px;
+  }
+
+  .document-actions {
+    padding: 0 14px 14px;
+  }
+
+  .document-actions button {
+    font-size: 11px;
+  }
+}

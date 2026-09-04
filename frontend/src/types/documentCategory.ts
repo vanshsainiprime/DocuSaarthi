@@ -1,0 +1,10 @@
+export type DocumentCategory =
+  | 'Not Categorized'
+  | 'Identity Proof'
+  | 'Address Proof'
+  | 'Income Certificate'
+  | 'Education Document'
+  | 'Photo'
+  | 'Signature'
+  | 'Family Document'
+  | 'Other'

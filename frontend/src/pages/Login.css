@@ -1,0 +1,316 @@
+/* 
+   LOGIN PAGE
+  */
+
+.login-page {
+  min-height: calc(100vh - 120px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 50px 20px;
+
+  color: var(--text-h);
+}
+
+
+/* 
+   LOGIN CARD
+  */
+
+.login-card {
+  width: 100%;
+  max-width: 450px;
+
+  padding: 35px;
+
+  box-sizing: border-box;
+
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 20px;
+
+  color: var(--text-h);
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+
+/* 
+   HEADER
+  */
+
+.login-header {
+  margin-bottom: 28px;
+}
+
+.login-header .eyebrow {
+  margin: 0 0 8px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  color: var(--accent);
+}
+
+.login-header h2 {
+  margin: 0 0 10px;
+
+  font-size: 30px;
+
+  color: var(--text-h);
+}
+
+.login-header p:last-child {
+  margin: 0;
+
+  color: var(--text);
+
+  line-height: 1.6;
+}
+
+
+/* 
+   FORM
+  */
+
+.login-card form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.login-card label {
+  margin-top: 8px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: var(--text-h);
+}
+
+.login-card input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 12px 13px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  outline: none;
+
+  background: var(--bg);
+
+  color: var(--text-h);
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.login-card input::placeholder {
+  color: var(--text);
+}
+
+.login-card input:focus {
+  border-color: var(--accent);
+}
+
+
+/* 
+   LOGIN BUTTON
+  */
+
+.login-card button {
+  margin-top: 14px;
+
+  padding: 12px 18px;
+
+  border: 1px solid var(--accent);
+
+  border-radius: 10px;
+
+  background: var(--accent);
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.login-card button:hover {
+  opacity: 0.9;
+
+  transform: translateY(-1px);
+
+  background: var(--accent);
+}
+
+.login-card button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* 
+   ERROR / SUCCESS
+  */
+
+.login-error,
+.login-success {
+  margin-bottom: 18px;
+
+  padding: 12px 14px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+}
+
+.login-error {
+  border: 1px solid #fecaca;
+
+  background: #fef2f2;
+
+  color: #b91c1c;
+}
+
+.login-success {
+  border: 1px solid #bbf7d0;
+
+  background: #f0fdf4;
+
+  color: #166534;
+}
+
+
+/* 
+   FOOTER
+  */
+
+.login-footer {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  margin-top: 24px;
+
+  color: var(--text);
+
+  font-size: 14px;
+}
+
+.login-footer a {
+  color: var(--accent);
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* 
+   DARK MODE
+  */
+
+:root[data-theme='dark'] .login-card {
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+:root[data-theme='dark'] .login-card input {
+  background: var(--bg);
+
+  color: var(--text-h);
+
+  border-color: var(--border);
+}
+
+:root[data-theme='dark'] .login-card input:focus {
+  border-color: var(--accent);
+}
+
+:root[data-theme='dark'] .login-card button {
+  background: var(--accent);
+
+  border-color: var(--accent);
+
+  color: #ffffff;
+}
+
+:root[data-theme='dark'] .login-card button:hover {
+  background: var(--accent);
+
+  border-color: var(--accent);
+
+  opacity: 0.9;
+}
+
+:root[data-theme='dark'] .login-error {
+  border-color: rgba(248, 113, 113, 0.3);
+
+  background: rgba(239, 68, 68, 0.1);
+
+  color: #fca5a5;
+}
+
+:root[data-theme='dark'] .login-success {
+  border-color: rgba(74, 222, 128, 0.3);
+
+  background: rgba(34, 197, 94, 0.1);
+
+  color: #86efac;
+}
+
+
+/* 
+   MOBILE
+  */
+
+@media (max-width: 500px) {
+  .login-page {
+    padding: 30px 16px;
+  }
+
+  .login-card {
+    padding: 25px 20px;
+  }
+
+  .login-header h2 {
+    font-size: 26px;
+  }
+}

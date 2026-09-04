@@ -1,0 +1,303 @@
+/* 
+   CHANDIGARH FORMS PAGE
+  */
+
+.chandigarh-forms-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+  color: var(--text-h);
+}
+
+
+/* 
+   INTRO
+  */
+
+.forms-intro {
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+}
+
+.forms-intro h2 {
+  margin: 8px 0;
+  font-size: 36px;
+  color: var(--text-h);
+}
+
+.forms-intro p {
+  color: var(--text);
+  line-height: 1.6;
+}
+
+
+/* 
+   FORMS LIST
+  */
+
+.forms-list {
+  display: grid;
+  gap: 16px;
+}
+
+
+/* 
+   FORM CARD
+  */
+
+.application-form-card {
+  display: flex;
+  gap: 18px;
+  padding: 22px;
+
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 18px;
+
+  color: var(--text-h);
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.application-form-card:hover {
+  border-color: var(--accent-border);
+
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+
+/* 
+   FORM ICON
+  */
+
+.form-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  background: var(--accent-bg);
+
+  color: var(--accent);
+}
+
+
+/* 
+   FORM CONTENT
+  */
+
+.form-content {
+  flex: 1;
+}
+
+.form-content h3 {
+  margin: 0 0 10px;
+
+  color: var(--text-h);
+}
+
+
+/* 
+   FORM META
+  */
+
+.form-meta {
+  display: flex;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+}
+
+.form-meta span {
+  padding: 5px 9px;
+
+  border-radius: 999px;
+
+  background: var(--code-bg);
+
+  font-size: 12px;
+
+  color: var(--text);
+}
+
+
+/* 
+   ACTIONS
+  */
+
+.form-actions {
+  display: flex;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+
+  margin-top: 18px;
+}
+
+.view-form-button,
+.ai-form-button {
+  padding: 10px 14px;
+
+  border-radius: 9px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* 
+   VIEW FORM BUTTON
+  */
+
+.view-form-button {
+  border: 1px solid var(--border);
+
+  background: var(--card);
+
+  color: var(--text-h);
+
+  text-decoration: none;
+}
+
+.view-form-button:hover {
+  background: var(--accent-bg);
+
+  border-color: var(--accent-border);
+
+  color: var(--accent);
+
+  transform: translateY(-1px);
+}
+
+
+/* 
+   AI FORM BUTTON
+  */
+
+.ai-form-button {
+  border: 1px solid var(--accent);
+
+  background: var(--accent);
+
+  color: #ffffff;
+}
+
+.ai-form-button:hover {
+  background: var(--accent);
+
+  border-color: var(--accent);
+
+  color: #ffffff;
+
+  opacity: 0.9;
+
+  transform: translateY(-1px);
+}
+
+
+/* 
+   DARK MODE
+  */
+
+:root[data-theme='dark'] .application-form-card {
+  background: var(--card);
+
+  border-color: var(--border);
+
+  color: var(--text-h);
+}
+
+:root[data-theme='dark'] .view-form-button {
+  background: var(--card);
+
+  border-color: var(--border);
+
+  color: var(--text-h);
+}
+
+:root[data-theme='dark'] .view-form-button:hover {
+  background: var(--accent-bg);
+
+  border-color: var(--accent-border);
+
+  color: var(--accent);
+}
+
+:root[data-theme='dark'] .ai-form-button {
+  background: var(--accent);
+
+  border-color: var(--accent);
+
+  color: #ffffff;
+}
+
+:root[data-theme='dark'] .ai-form-button:hover {
+  background: var(--accent);
+
+  border-color: var(--accent);
+
+  color: #ffffff;
+
+  opacity: 0.9;
+}
+
+
+/* 
+   MOBILE
+  */
+
+@media (max-width: 600px) {
+  .chandigarh-forms-page {
+    padding: 28px 16px 60px;
+  }
+
+  .forms-intro h2 {
+    font-size: 28px;
+  }
+
+  .application-form-card {
+    flex-direction: column;
+  }
+
+  .form-actions {
+    width: 100%;
+  }
+
+  .view-form-button,
+  .ai-form-button {
+    flex: 1;
+
+    text-align: center;
+  }
+}
